@@ -1,0 +1,20 @@
+<div class="game-card-container" [ngClass]="{'web-device': isWebDevice}">
+    <div class="jackpotAmount" *ngIf="jackpotAmount">£{{ jackpotAmount }}</div>
+
+    <app-game-ribbon *ngIf="displayTopRibbon"
+        text="TOP"
+    ></app-game-ribbon>
+    <app-game-ribbon *ngIf="displayNewRibbon && !displayTopRibbon"
+        text="NEW"
+        color="green"
+    ></app-game-ribbon>
+
+    <img [src]="game.image" alt="Game image" class="game-image">
+
+    <div class="hover-content">
+        <div class="action-container">
+            <div class="game-name">{{ game.name }}</div>
+            <button>Play</button>
+        </div>
+    </div>
+</div>

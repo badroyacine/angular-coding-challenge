@@ -1,0 +1,11 @@
+<div class="games-container" *ngIf="games.length > 0; else notGameFound">
+    <app-game *ngFor="let game of games"
+        [game]="game"
+        [currentCategory]="category"
+        [isWebDevice]="isWebDevice"
+    ></app-game>
+</div>
+
+<ng-template #notGameFound>
+    <app-empty-results-card message="No games found in this category"></app-empty-results-card>
+</ng-template>

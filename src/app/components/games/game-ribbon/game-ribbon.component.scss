@@ -1,0 +1,45 @@
+.ribbon {
+    width: 85px;
+    height: 85px;
+    top: -9px;
+    right: -8px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 10;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #8b0000;
+        z-index: -1;
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+    }
+
+    span {
+        width: 175px;
+        top: 10px;
+        left: -32px;
+        position: absolute;
+        height: 40px;
+        background-color: #da4747;
+        transform: rotate(45deg);
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+    }
+    &.green {
+        &::before,
+        &::after {
+            background-color: #2d540e;
+        }
+        span {
+            background-color: #82c52e;
+        }
+    }
+}

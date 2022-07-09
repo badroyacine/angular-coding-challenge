@@ -1,0 +1,9 @@
+.games-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    padding: 15px;
+}

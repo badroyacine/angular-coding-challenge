@@ -1,0 +1,15 @@
+<nav [ngClass]="{'open': isMenuOpened}">
+    <div class="toggle">
+        <span class="menu-icon" (click)="openMenu()">
+            <img src="../../../assets/images/menu.png" width="25" alt="">
+        </span>
+        <span class="cancel-icon" (click)="closeMenu()">
+            <img src="../../../assets/images/cancel.png" width="25" alt="">
+        </span>
+    </div>
+    <ul class="menu">
+        <li *ngFor="let catgory of menuCategories" routerLinkActive="active" (click)="closeMenu()">
+            <a [routerLink]="'/' + catgory.name">{{ catgory.label }}</a>
+        </li>
+    </ul>
+</nav>
