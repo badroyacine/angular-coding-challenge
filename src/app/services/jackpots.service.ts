@@ -18,7 +18,7 @@ export class JackpotsService {
   constructor(private http: HttpClient) { }
 
   getAllJackpots(): Observable<Jackpot[]> {
-    return this.http.get<Jackpot[]>(`${this.baseUrl}/jackpots.php`)
+    return this.http.get<Jackpot[]>(`${this.baseUrl}jackpots.php`)
       .pipe(
         tap(jackpots => {
           this.jackpots = [...jackpots]

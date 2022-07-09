@@ -16,7 +16,7 @@ export class GamesService {
   constructor(private http: HttpClient) { }
 
   getAllGames(): Observable<Game[]> {
-    return this.http.get<Game[]>(`${this.baseUrl}/games.php`)
+    return this.http.get<Game[]>(`${this.baseUrl}games.php`)
       .pipe(
         tap(games => this.games$.next(games))
       );
