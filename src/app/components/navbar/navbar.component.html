@@ -8,8 +8,8 @@
         </span>
     </div>
     <ul class="menu">
-        <li *ngFor="let catgory of menuCategories" routerLinkActive="active" (click)="closeMenu()">
-            <a [routerLink]="'/' + catgory.name">{{ catgory.label }}</a>
+        <li *ngFor="let catgory of menuCategories" routerLinkActive="active">
+            <a [routerLink]="'/' + catgory.name" (click)="closeMenu()">{{ catgory.label }}</a>
         </li>
     </ul>
 </nav>
